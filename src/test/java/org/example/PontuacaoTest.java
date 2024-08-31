@@ -26,8 +26,8 @@ public class PontuacaoTest {
     public void testNaoPermitirPontuacaoNegativa() {
         Pontuacao pontuacao = new Pontuacao();
         pontuacao.adicionarPontos(10);
-        pontuacao.removerPontos(15);
+        pontuacao.removerPontos(15); // Tentar remover mais do que o disponível
 
-        assertEquals(10, pontuacao.getPontuacao());
+        assertEquals(10, pontuacao.getPontuacao()); // A pontuação não deve ser alterada
     }
 }
